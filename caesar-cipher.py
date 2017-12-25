@@ -18,7 +18,7 @@ def shift(index, key):
     if key < 0:
         for i in range(abs(key)):
             index -= 1
-            if index == -1:
+            if index <= 0:
                 index = 26
 
     return index

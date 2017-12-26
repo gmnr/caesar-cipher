@@ -13,13 +13,13 @@ def shift(index, key):
     if key >= 0:
         for i in range(key):
             index += 1
-            if index >= 26:
+            if index > 25:
                 index = 0
     if key < 0:
         for i in range(abs(key)):
             index -= 1
-            if index <= 0:
-                index = 26
+            if index < 0:
+                index = 25
 
     return index
 

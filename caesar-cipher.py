@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # caesar-cipher.py - a command line tool to decrypt messages using a Caesar Cipher
 # Created by: mini-gui
 # Date: December 2017

@@ -32,7 +32,7 @@ def crypt(message):
     crypted_msg = ''
     global crypt_key
 
-    for word in message.split(' '):
+    for word in message.lower().split(' '):
         crypted_word = ''
         for letter in word:
             if letter not in crypt_base:     # keep special characters in place
@@ -78,7 +78,7 @@ if __name__ == '__main__':
     if len(sys.argv) == 1:
        crypt_key = int(input('What is the key?\n')) 
 
-       msg = input('Input the message you need to crypt..\n').lower()
+       msg = input('Input the message you need to crypt..\n')
        print(2*'\n')
        sleep(0.2)
 
@@ -105,7 +105,7 @@ if __name__ == '__main__':
 # else use the '-k' flag to encrypt a message
         else:
             crypt_key = int(arguments.key_stored)
-            msg = input('Input the message you need to encrypt..\n').lower()
+            msg = input('Input the message you need to encrypt..\n')
             print(2*'\n')
             sleep(0.2)
             print(crypt(msg))
